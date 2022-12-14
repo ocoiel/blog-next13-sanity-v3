@@ -1,0 +1,8 @@
+export default function PageHome() {
+  return (
+    <>
+      <h1 className="text-2xl">Page Home</h1>
+      <p>test</p>
+    </>
+  );
+}
