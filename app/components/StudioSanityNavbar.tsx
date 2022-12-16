@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
-import { LogoProps, NavbarProps } from "sanity";
-export default function StudioSanityNavbar(props: NavbarProps) {
+import { NavbarProps } from "sanity";
+export function StudioSanityNavbar(props: NavbarProps) {
   return (
     <>
       <div className="text-[#f7ab0a] flex items-center justify-between p-4">

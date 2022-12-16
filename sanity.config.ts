@@ -3,8 +3,8 @@ import { deskTool } from "sanity/desk";
 import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
 import { myTheme } from "./theme";
-import StudioSanityNavbar from "./app/components/StudioSanityNavbar";
-import Logo from "./app/components/Logo";
+import { StudioSanityNavbar } from "./app/components/StudioSanityNavbar";
+import { Logo } from "./app/components/Logo";
 
 // const projectId = process.env.NEXT_PUBLIC_PROJECT_ID!;
 // const dataset = process.env.NEXT_PUBLIC_DATASET!;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LogoProps } from "sanity";
 
-export default function Logo(props: LogoProps) {
+export function Logo(props: LogoProps) {
   const { renderDefault, title } = props;
 
   return (
