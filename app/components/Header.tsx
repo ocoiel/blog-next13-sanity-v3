@@ -20,7 +20,7 @@ export function Header() {
       <div>
         <Link
           href="https://github.com/ocoiel"
-          className="px-5 py-3 sm:text-base bg-gray-900 text-[#f7ab0a] flex items-center rounded-full text-center"
+          className="px-5 py-3 sm:text-base bg-gray-900 text-orange flex items-center rounded-full text-center"
         >
           Sign in and subscribe to newsletter
         </Link>

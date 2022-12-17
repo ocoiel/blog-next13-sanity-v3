@@ -5,7 +5,7 @@ export function Banner() {
         <h1 className="text-7xl">Gabriel Albuquerque Blog</h1>
         <h2>
           Welcome to{" "}
-          <span className="underline decoration-2 decoration-[#f7ab0a] ">
+          <span className="underline decoration-2 decoration-orange ">
             every people
           </span>{" "}
           safe place to read about technologies

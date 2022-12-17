@@ -5,7 +5,7 @@ module.exports = {
     appDir: true,
   },
   images: {
-    domains: ["https://github.com/"],
+    domains: ["github.com", "cdn.sanity.io"],
     remotePatterns: [
       {
         protocol: "https",
