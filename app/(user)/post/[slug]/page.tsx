@@ -3,12 +3,28 @@ import { client } from "../../../../lib/sanity/sanity.client";
 import Image from "next/image";
 import urlFor from "../../../../lib/sanity/urlFor";
 import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "../../../components/RichTextComponents";
 
 type PostType = {
   params: {
     slug: string;
   };
 };
+
+export async function generateStaticParams() {
+  const query = groq`
+    *[_type=='post'] {
+      slug
+    }
+  `;
+
+  const slugs: Post[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+  return slugRoutes.map((slug) => ({
+    slug,
+  }));
+}
 
 async function Post({ params: { slug } }: PostType) {
   const query = groq`
@@ -82,7 +98,7 @@ async function Post({ params: { slug } }: PostType) {
           </section>
         </div>
       </section>
-      {/* <PortableText value={post.body} components={RichTextComponents} /> */}
+      <PortableText value={post.body} components={RichTextComponents} />
     </article>
   );
 }
