@@ -5,6 +5,7 @@ import { schemaTypes } from "./schemas";
 import { myTheme } from "./theme";
 import { StudioSanityNavbar } from "./app/components/StudioSanityNavbar";
 import { Logo } from "./app/components/Logo";
+import { getDefaultDocumentNode } from "./lib/sanity/structure";
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_DATASET;
@@ -17,7 +18,12 @@ export default defineConfig<WorkspaceOptions>({
   // Protect this! //Dot Env dont get recognized, i dont know why...
   projectId: "pjyt8nm1",
   dataset: "production",
-  plugins: [deskTool(), visionTool()],
+  plugins: [
+    deskTool({
+      defaultDocumentNode: getDefaultDocumentNode,
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
