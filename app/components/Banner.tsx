@@ -2,7 +2,7 @@ export function Banner() {
   return (
     <div className="flex flex-col lg:flex-row lg:space-x-5 items-center justify-between space-x-2 font-bold px-10 py-5 mb-10">
       <div>
-        <h1 className="text-7xl">Gabriel Albuquerque Blog</h1>
+        <h1 className="text-7xl">Gabriel Daily&apos;s</h1>
         <h2>
           Welcome to{" "}
           <span className="underline decoration-2 decoration-orange ">
