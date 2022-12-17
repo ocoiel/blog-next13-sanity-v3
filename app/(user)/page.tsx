@@ -13,6 +13,8 @@ const query = groq`
   } | order(_createdAt desc)
 `;
 
+export const revalidate = 30; // NextJS reserved word to revalidate
+
 export default async function HomePage() {
   if (previewData()) {
     return (
